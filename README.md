@@ -4,9 +4,9 @@
 platforms, and the compilers and toolchains underneath them. Fifteen years across Flash, Java,
 C#, TypeScript and Python, whichever the tool needed.
 
-Lately the work is shifting dev left. If a developer's job is spec and architecture, then
-implementation becomes detail an agent can carry. That only holds while the tests can be
-treated as ground truth, so most of what is below is about validating tests.
+Agents got good enough at implementation that the work can finally move up to spec and
+architecture. That only holds while the tests can be treated as ground truth, so most of what
+is below is about validating tests.
 
 [alextavor.github.io](https://alextavor.github.io) · [LinkedIn](https://www.linkedin.com/in/alextavor/) · Utrecht, NL
 
@@ -15,22 +15,21 @@ treated as ground truth, so most of what is below is about validating tests.
 ### The method, and the experiment that killed it
 
 **[pdd-experiment-cave](https://github.com/AlexTavor/pdd-experiment-cave)**: a three-arm
-experiment on a large brownfield codebase, comparing a raw agent, a chunked agent and the full
-method. Frozen prompts, pinned commits, a kill-condition declared before the run, blind
-adjudication by a separate judge. Run 1 is in. The full method found the same four
-high-severity issues as the raw agent at 3.9x the cost, and one static gate returned 0 real
-findings out of 36. Both results are committed as they came out.
+experiment comparing a raw agent against a spec-driven method on a large brownfield codebase.
+Prompts frozen, commits pinned, blind adjudication by a separate judge. Stopped after run 1,
+because the result was stark and a run is expensive: the method found the same four
+high-severity issues as the raw agent at 3.9x the cost.
+[Dashboard](https://alextavor.github.io/pdd-experiment-cave/).
 
 **[proof-driven-development](https://github.com/AlexTavor/proof-driven-development)**:
-concluded. A methodology and CLI for changing code you cannot verify by reading, legacy or
-AI-generated, without breaking it. It graded whether a test would actually fail on a bug, using
-mutation and boundary analysis; run against a public 226-star SDK it found a module at 94% line
-coverage whose tests missed about a third of injected bugs. The experiment above is why it
-stopped. What survived is the part that paid for itself: the skills and the deterministic
-gates, which now run my current project.
+concluded. A method and CLI for changing code you cannot verify by reading, legacy or
+AI-generated, without breaking it. The experiment above is why it stopped, and the
+[post-mortem](https://github.com/AlexTavor/proof-driven-development/blob/main/POSTMORTEM.md)
+says what came out of it.
 
-**[engineering-discipline](https://github.com/AlexTavor/engineering-discipline)**: those skills,
-extracted as an installable, stack-independent plugin, so the standard travels with a team.
+**[engineering-discipline](https://github.com/AlexTavor/engineering-discipline)**: the rules
+that survived, as an installable, stack-independent plugin. Every one exists because something
+went wrong on a real project, and each cites the commits it was recovered from.
 
 **[chdr](https://github.com/AlexTavor/chdr)**: a LangGraph orchestrator for an autonomous TDD
 loop, with a post-mortem on the results.
