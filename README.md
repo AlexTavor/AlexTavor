@@ -1,33 +1,58 @@
-<div align="center">
-
 # Alex Tavor
 
-### Software engineer enjoying the craft in all its forms · lately deep in AI
+**I build the tools other devs build with.** Authoring systems, visual editors, no-code
+platforms, and the compilers and toolchains underneath them. Fifteen years across Flash, Java,
+C#, TypeScript and Python, whichever the tool needed.
 
-<p>
-  <a href="https://alextavor.github.io">
-    <img src="https://img.shields.io/badge/Website-alextavor.github.io-2ea44f?style=for-the-badge&logo=github&logoColor=white" alt="Website" />
-  </a>
-  <a href="https://www.linkedin.com/in/alextavor/">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-  </a>
-</p>
+Lately the work is shifting dev left. If a developer's job is spec and architecture, then
+implementation becomes detail an agent can carry. That only holds while the tests can be
+treated as ground truth, so most of what is below is about validating tests.
 
-</div>
+[alextavor.github.io](https://alextavor.github.io) · [LinkedIn](https://www.linkedin.com/in/alextavor/) · Utrecht, NL
 
-## 👋 About
+---
 
-I build software of many kinds and don't stay in one lane: games, tools, apps, platforms, whatever the problem calls for. The repos below are just the last half-year or so, a custom engine, a game built on it, and some experiments in formalizing how I work, done as AI-first as I could manage.
+### The method, and the experiment that killed it
 
-## 🚀 Recent work
+**[pdd-experiment-cave](https://github.com/AlexTavor/pdd-experiment-cave)**: a three-arm
+experiment on a large brownfield codebase, comparing a raw agent, a chunked agent and the full
+method. Frozen prompts, pinned commits, a kill-condition declared before the run, blind
+adjudication by a separate judge. Run 1 is in. The full method found the same four
+high-severity issues as the raw agent at 3.9x the cost, and one static gate returned 0 real
+findings out of 36. Both results are committed as they came out.
 
-- **cave**: a browser simulation game on a custom, data-driven engine I wrote. &nbsp;[![Play on itch.io](https://img.shields.io/badge/▶_Play-itch.io-FA5C5C?style=flat&logo=itchdotio&logoColor=white)](https://speaks-with-stone.itch.io/cave) [![Code](https://img.shields.io/badge/Code-181717?style=flat&logo=github&logoColor=white)](https://github.com/AlexTavor/cave-public)
-- **[engineering-discipline](https://github.com/AlexTavor/engineering-discipline)**: portable software-engineering discipline as triggerable Claude Code skills.
-- **[proof-driven-development](https://github.com/AlexTavor/proof-driven-development)**: a methodology and CLI for changing code you can't verify by reading (legacy or AI-generated) without breaking it.
-- **[chdr](https://github.com/AlexTavor/chdr)**: a LangGraph orchestrator for an autonomous TDD loop.
-- **[dod](https://github.com/AlexTavor/dod)**: a dashboard of dashboards, one local supervisor for every other local dashboard.
-- **[rapport](https://github.com/AlexTavor/rapport)**: local-only analysis and graphing of relationships from chat dumps.
+**[proof-driven-development](https://github.com/AlexTavor/proof-driven-development)**:
+concluded. A methodology and CLI for changing code you cannot verify by reading, legacy or
+AI-generated, without breaking it. It graded whether a test would actually fail on a bug, using
+mutation and boundary analysis; run against a public 226-star SDK it found a module at 94% line
+coverage whose tests missed about a third of injected bugs. The experiment above is why it
+stopped. What survived is the part that paid for itself: the skills and the deterministic
+gates, which now run my current project.
 
-## 🧰 Stack (recent)
+**[engineering-discipline](https://github.com/AlexTavor/engineering-discipline)**: those skills,
+extracted as an installable, stack-independent plugin, so the standard travels with a team.
 
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) ![HTML5 Canvas](https://img.shields.io/badge/HTML5%20Canvas-E34F26?style=flat&logo=html5&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) ![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=flat&logo=langchain&logoColor=white) ![LLMs & Agents](https://img.shields.io/badge/LLMs%20%26%20Agents-8A2BE2?style=flat)
+**[chdr](https://github.com/AlexTavor/chdr)**: a LangGraph orchestrator for an autonomous TDD
+loop, with a post-mortem on the results.
+
+### Engines and authoring
+
+**[cave-public](https://github.com/AlexTavor/cave-public)**: a browser simulation game on a
+custom data-driven engine, with compiler and linker, physics, simulation and narrative
+subsystems, an authoring suite, and the art tool I made its visuals with.
+[Play it](https://speaks-with-stone.itch.io/cave).
+
+### Local tooling
+
+**[dod](https://github.com/AlexTavor/dod)**: one local supervisor that registers, launches and
+frames every other local dashboard in a single admin UI.
+
+**[rapport](https://github.com/AlexTavor/rapport)**: local-only analysis and graphing of
+relationships from text chat dumps.
+
+---
+
+**Stack:** TypeScript · React · Node · Python · C# · Java · Unity
+
+Open to lead and senior engineering roles. Reachable on
+[LinkedIn](https://www.linkedin.com/in/alextavor/).
