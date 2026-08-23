@@ -1,24 +1,23 @@
 # Alex Tavor
 
-**I build the tools other devs build with.** Authoring systems, visual editors, no-code
+I build virtual power tools - authoring systems, visual editors, no-code
 platforms, and the compilers and toolchains underneath them. Fifteen years across Flash, Java,
-C#, TypeScript and Python, whichever the tool needed.
+C#, TypeScript, Python, whichever the tool needed.
 
 Agents got good enough at implementation that the work can finally move up to spec and
 architecture. That only holds while the tests can be treated as ground truth, so most of what
 is below is about validating tests.
 
-[alextavor.github.io](https://alextavor.github.io) · [LinkedIn](https://www.linkedin.com/in/alextavor/) · Utrecht, NL
+[LinkedIn](https://www.linkedin.com/in/alextavor/) · Utrecht, NL
 
 ---
 
-### The method, and the experiment that killed it
+### A method, and the experiment that killed it
 
 **[pdd-experiment-cave](https://github.com/AlexTavor/pdd-experiment-cave)**: a three-arm
 experiment comparing a raw agent against a spec-driven method on a large brownfield codebase.
 Prompts frozen, commits pinned, blind adjudication by a separate judge. Stopped after run 1,
-because the result was stark and a run is expensive: the method found the same four
-high-severity issues as the raw agent at 3.9x the cost.
+because the result was stark and a run is expensive.
 [Dashboard](https://alextavor.github.io/pdd-experiment-cave/).
 
 **[proof-driven-development](https://github.com/AlexTavor/proof-driven-development)**:
