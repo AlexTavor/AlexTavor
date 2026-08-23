@@ -5,8 +5,7 @@ platforms, and the compilers and toolchains underneath them. Fifteen years acros
 C#, TypeScript, Python, whichever the tool needed.
 
 Agents got good enough at implementation that the work can finally move up to spec and
-architecture. That only holds while the tests can be treated as ground truth, so most of what
-is below is about validating tests.
+architecture. Much of what is below is an exploration of tooling for that.
 
 [LinkedIn](https://www.linkedin.com/in/alextavor/) · Utrecht, NL
 
