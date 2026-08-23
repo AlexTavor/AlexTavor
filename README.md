@@ -31,6 +31,11 @@ says what came out of it.
 that survived, as an installable, stack-independent plugin. Every one exists because something
 went wrong on a real project, and each cites the commits it was recovered from.
 
+**[gatechain](https://github.com/AlexTavor/gatechain)**: the companion to
+engineering-discipline. Those rules as enforceable gates for TypeScript repositories: eleven
+detectors and the chain that runs them at the pre-push hook and in CI. The modules are what
+independently survived into two unrelated codebases, and the package is gated by its own chain.
+
 **[chdr](https://github.com/AlexTavor/chdr)**: a LangGraph orchestrator for an autonomous TDD
 loop, with a post-mortem on the results.
 
